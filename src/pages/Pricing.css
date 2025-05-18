@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Syne", sans-serif;
+}
+
+ .pricing-page {
+  background-color: #0A0A0A;
+  color: grey;
+  min-height: 100vh;
+  background: linear-gradient(180deg,  black 0%, #5b8def0d 100%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-header {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  /* box-shadow: 0 0 40px rgba(0, 0, 0, 0.5); */
+  
+  margin-top: 20px;
+}
+
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 0;
+}
+
+.scroll-text span {
+  display: inline-block;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  word-spacing: 300px;
+  opacity: 0.8;
+  animation: scrollText 30s linear infinite;
+  background: linear-gradient(90deg, #ffffff 0%, #aaaaaa 50%, #555555 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 2px 30px rgba(255, 255, 255, 0.2);
+  
+  /* 👇 Added gap between repeated PRICING words */
+  margin-right: 80px;
+}
+
+.gradient-text {
+  position: relative;
+  padding-left: 25px; /* space for the dot */
+}
+
+.gradient-text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+
+@keyframes scrollText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 60px;
+}
+
+.pricing-card {
+  background-color: #111;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 600px;
+}
+
+.premium {
+  background-color: #035158;
+  color: rgb(255, 255, 255);
+}
+
+.standard {
+  background-color: #000000;
+  color: white;
+}
+
+.card-label {
+  position: absolute;
+  top: -14px;
+  right: 10px;
+  font-size: 0.7rem;
+  background: #00c8d7;
+  color: black;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 12px;
+  transform: rotate(-17deg);
+}
+
+.standard .card-label {
+  background-color: #ddd;
+  color: black;
+}
+
+.pricing-tier {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pricing-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.pricing-period {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.pricing-description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.features-list {
+  list-style: none;
+  font-size: 0.9rem;
+  line-height: 2;
+  padding-left: 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.circle {
+  margin-right: 8px;
+  font-size: 1rem;
+  line-height: 1;
+  display: inline-block;
+  color: white;
+}
+
+.premium .blue {
+  color: #00c8d7;
+}
+
+.standard .white {
+  color: white;
+}
+
+.btn-wrapper {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.get-started-btn {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.solo .get-started-btn {
+  background-color: #111;
+  color: white;
+}
+
+.standard .get-started-btn {
+  background-color: #000000;
+  color: white;
+}
+
+.premium .get-started-btn {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scroll-text span {
+    font-size: 3rem;
+  }
+}

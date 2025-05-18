@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Importing base styles from services page */
+:root {
+  --primary-gradient-start: #5B8DEF;
+  --primary-gradient-end: #0AD99B;
+  --background-color: #0A0A0A;
+  --text-color: #FFFFFF;
+  --secondary-text-color: rgba(255, 255, 255, 0.7);
+  --accent-color: #00B8D9;
+  --card-bg-color: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --hover-color: rgba(255, 255, 255, 0.1);
+  --form-bg: rgba(255, 255, 255, 0.02);
+  --input-bg: rgba(255, 255, 255, 0.03);
+  --input-border: rgba(255, 255, 255, 0.1);
+  --input-focus-border: rgba(255, 255, 255, 0.2);
+  --form-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  --success-color: #0AD99B;
+}
+
+/* Inquiry Page Header */
+.inquiry-header {
+  padding: 120px 0 80px;
+  text-align: center;
+  background: linear-gradient(180deg, #5b8def0d 0%, black 95%);
+}
+
+.inquiry-title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  background: linear-gradient(to right, white, grey);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.inquiry-subtitle {
+  font-size: 24px;
+  color: var(--secondary-text-color);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Form Section */
+.form-section {
+  padding: 60px 0 100px;
+  background: linear-gradient(180deg, black 0%, #5b8def0d 95%);
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+.form-group-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.form-group-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 15px;
+  background: linear-gradient(to right, white, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.form-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 60px;
+  background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Form Input Styling */
+input, select, textarea {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, rgba(91, 141, 239, 0.05), rgba(10, 217, 155, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: rgba(255, 255, 255, 0.1);
+  outline: none;
+  background: linear-gradient(135deg, rgba(91, 141, 239, 0.05), rgba(10, 217, 155, 0.05));
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input:not(:placeholder-shown), textarea:not(:placeholder-shown) {
+  background: linear-gradient(135deg, rgba(91, 141, 239, 0.05), rgba(10, 217, 155, 0.05));
+  color: #FFFFFF;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  padding-right: 40px;
+  cursor: pointer;
+  background-color: linear-gradient(135deg, rgba(91, 141, 239, 0.05), rgba(10, 217, 155, 0.05));
+}
+
+select option {
+  background: #1a1a1a;
+  color: #FFFFFF;
+  padding: 15px;
+}
+
+select:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Service tabs in form */
+.form-services-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-services-tabs .service-tab {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 0;
+}
+
+.form-services-tabs .service-tab .tab-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.form-services-tabs .service-tab span {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.form-services-tabs .service-tab.active {
+  background: linear-gradient(180deg, rgba(91, 141, 239, 0.1) 0%, rgba(10, 217, 155, 0.05) 100%);
+  border-color: rgba(91, 141, 239, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.form-services-tabs .service-tab:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Form Submit Section */
+.form-submit {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.submit-btn {
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, rgba(91, 141, 239, 0.2), rgba(10, 217, 155, 0.2));
+  border: 1px solid rgba(91, 141, 239, 0.3);
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(91, 141, 239, 0.3), rgba(10, 217, 155, 0.3));
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.privacy-note {
+  font-size: 12px;
+  color: var(--secondary-text-color);
+  margin-top: 15px;
+}
+
+/* Success Message */
+.success-message {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.1));
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  color: #4CAF50;
+  padding: 15px 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.error-message {
+  background: linear-gradient(135deg, rgba(244, 67, 54, 0.2), rgba(244, 67, 54, 0.1));
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  color: #f44336;
+  padding: 15px 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(91, 141, 239, 0.15), rgba(10, 217, 155, 0.15));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: var(--success-color);
+  margin: 0 auto 20px;
+}
+
+.success-message h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(to right, white, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.success-message p {
+  font-size: 18px;
+  color: var(--secondary-text-color);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Benefits Section */
+.inquiry-benefits-section {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #5b8def0d 0%, black 95%);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.benefit-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.benefit-icon {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.benefit-card p {
+  color: var(--secondary-text-color);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* CTA Section specific to inquiry page */
+.inquiry-cta {
+  padding: 60px 0;
+  background: transparent;
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  background: transparent;
+}
+
+/* Consultation Button Styling */
+.book-call-btn {
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, rgba(91, 141, 239, 0.2), rgba(10, 217, 155, 0.2));
+  border: 1px solid rgba(91, 141, 239, 0.3);
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  min-width: 250px;
+  margin: 0 auto;
+}
+
+.book-call-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(91, 141, 239, 0.3), rgba(10, 217, 155, 0.3));
+  color: white;
+  text-decoration: none;
+}
+
+.book-call-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove any background from the section */
+section.cta-section.inquiry-cta {
+  background: transparent;
+}
+
+/* Ensure no background on the container */
+.container {
+  background: transparent;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .inquiry-title {
+    font-size: 48px;
+  }
+  
+  .form-container {
+    padding: 30px;
+  }
+  
+  .form-group-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inquiry-title {
+    font-size: 42px;
+  }
+  
+  .inquiry-subtitle {
+    font-size: 20px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .form-services-tabs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .form-services-tabs .service-tab {
+    padding: 12px;
+  }
+  
+  .form-services-tabs .service-tab .tab-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .form-services-tabs .service-tab span {
+    font-size: 13px;
+  }
+  
+  .benefit-card {
+    padding: 20px;
+  }
+  
+  .form-container {
+    padding: 20px;
+  }
+  
+  .submit-btn, .book-call-btn {
+    width: 100%;
+    padding: 14px 30px;
+  }
+  
+  input, select, textarea {
+    padding: 12px;
+  }
+  
+  .book-call-btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 14px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inquiry-title {
+    font-size: 36px;
+  }
+  
+  .form-container {
+    padding: 20px;
+  }
+  
+  .form-section-title {
+    font-size: 20px;
+  }
+}
