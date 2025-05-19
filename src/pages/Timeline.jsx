@@ -84,16 +84,16 @@ const Timeline = () => {
     <div className='process'>
     <div className="process-header">
         <div className="scroll-text">
-          <span className="gradient-text">DEVELOPMENT PROCESS</span>&nbsp;&nbsp;&nbsp;
-          <span className="gradient-text">DEVELOPMENT PROCESS</span>&nbsp;&nbsp;&nbsp;
-          <span className="gradient-text">DEVELOPMENT PROCESS</span>&nbsp;&nbsp;&nbsp;
-          <span className="gradient-text">DEVELOPMENT PROCESS</span>&nbsp;&nbsp;&nbsp;
-          <span className="gradient-text">DEVELOPMENT PROCESS</span>&nbsp;&nbsp;&nbsp;
-          <span className="gradient-text">DEVELOPMENT PROCESS</span>&nbsp;&nbsp;&nbsp;
-          <span className="gradient-text">DEVELOPMENT PROCESS</span>&nbsp;&nbsp;&nbsp;
-          <span className="gradient-text">DEVELOPMENT PROCESS</span>&nbsp;&nbsp;&nbsp;
-          <span className="gradient-text">DEVELOPMENT PROCESS</span>&nbsp;&nbsp;&nbsp;
-          <span className="gradient-text">DEVELOPMENT PROCESS</span>&nbsp;&nbsp;&nbsp;
+          <span className="gradient-text">PROCESS</span>&nbsp;&nbsp;&nbsp;
+          <span className="gradient-text">PROCESS</span>&nbsp;&nbsp;&nbsp;
+          <span className="gradient-text">PROCESS</span>&nbsp;&nbsp;&nbsp;
+          <span className="gradient-text">PROCESS</span>&nbsp;&nbsp;&nbsp;
+          <span className="gradient-text">PROCESS</span>&nbsp;&nbsp;&nbsp;
+          <span className="gradient-text">PROCESS</span>&nbsp;&nbsp;&nbsp;
+          <span className="gradient-text">PROCESS</span>&nbsp;&nbsp;&nbsp;
+          <span className="gradient-text">PROCESS</span>&nbsp;&nbsp;&nbsp;
+          <span className="gradient-text">PROCESS</span>&nbsp;&nbsp;&nbsp;
+          <span className="gradient-text">PROCESS</span>&nbsp;&nbsp;&nbsp;
         </div>
       </div>
     <div className="timeline-container" ref={timelineRef}>
